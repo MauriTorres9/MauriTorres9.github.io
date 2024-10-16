@@ -1,0 +1,338 @@
+    /* Importar fuente de Google Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+    body {
+        padding-top: 50px; /* Ajusta este valor según la altura de tu navbar */
+    }
+    /* Eliminar márgenes entre secciones */
+section {
+    margin: 0; /* Elimina margen alrededor de cada sección */
+    padding: 40px 0; /* Ajusta el padding según tus necesidades */
+}
+
+    /* Estilo global */
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;
+    }
+    .custom-card:hover {
+        transform: scale(1.05); /* Efecto de hover */
+    }
+
+    @media (max-width: 768px) {
+        .custom-carousel {
+            height: 150px; /* Ajusta la altura según tus necesidades */
+            overflow: hidden; /* Para ocultar el contenido que se desborde */
+        }
+    
+        .custom-carousel .carousel-item {
+            height: 100%; /* Asegúrate de que los elementos del carrusel llenen el contenedor */
+        }
+    
+        .custom-carousel .carousel-item img {
+            height: 100%; /* Ajusta la altura de la imagen al 100% del contenedor */
+            object-fit: cover; /* Mantiene la proporción de la imagen sin distorsionarla */
+        }
+    }
+    
+
+    /* navegacion */
+    .navbar-nav .nav-link {
+        color: #ffffff; /* Color inicial de los enlaces */
+        transition: color 0.3s ease; /* Animación suave en el cambio de color */
+    }
+    
+    .navbar-nav .nav-link:hover {
+        color: #c3e6cb; /* Cambia este color a tu preferencia */
+    }
+    .navbar-title {
+        font-size: 1.2rem; /* Ajusta este valor según lo desees */
+        color: black;
+    }
+    
+    @keyframes zoomIn {
+        from {
+            transform: scale(0);
+            opacity: 0;
+        }
+        to {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+    #quienes-somos img {
+        margin: 10px 0; /* Añade margen vertical entre las imágenes */
+    }
+
+
+    .custom-modal {
+        animation: zoomIn 0.5s ease-in-out; /* Cambia el tiempo y el tipo de animación según prefieras */
+    }
+
+    .custom-card {
+        height: 450px; /* Altura fija para las tarjetas */
+        width: 100%; /* Ancho completo */
+    }
+    
+    .card-img-top {
+        width: 100%; /* Asegúrate de que la imagen ocupe todo el ancho de la tarjeta */
+        height: 200px; /* Ajusta la altura de la imagen */
+        object-fit: cover; /* Mantiene la proporción de la imagen */
+    }
+    
+    .card-body {
+        display: flex;
+        flex-direction: column; /* Permite alinear elementos verticalmente */
+        justify-content: space-between; /* Espaciado uniforme */
+        height: 100%; /* Hace que el cuerpo de la tarjeta use toda la altura */
+    }
+    
+    
+    html {
+        scroll-padding-top: 700px; /* Ajusta según la altura de tu navbar */
+        scroll-behavior: smooth; /* Suaviza el desplazamiento */
+    }
+
+
+    /* Estilo de las secciones */
+    .section-title {
+        font-size: 2rem; /* Tamaño de fuente */
+        font-weight: 700; /* Grosor del texto */
+        color: #333; /* Color oscuro */
+        text-align: center; /* Alineación centrada */
+        margin-bottom: 1.5rem; /* Espacio inferior */
+    }
+
+    /* Estilo para las secciones de productos */
+    .product .section-header h2 {
+        font-size: 2rem; /* Tamaño de fuente */
+        font-weight: 700; /* Grosor del texto */
+        color: #333; /* Color oscuro */
+        text-align: center; /* Alineación centrada */
+        margin-bottom: 1.5rem; /* Espacio inferior */
+    }
+
+    .product .section-header p {
+        font-size: 1.25rem; /* Tamaño de fuente */
+        color: #666; /* Color gris */
+        text-align: center; /* Alineación centrada */
+        margin-bottom: 2rem; /* Espacio inferior */
+    }
+
+    .swiper-slide {
+        background-size: contain; /* Asegura que la imagen se ajuste sin cortarse */
+        background-repeat: no-repeat; /* Evita que la imagen se repita */
+        background-position: center; /* Centra la imagen */
+        height: 600px; /* Altura del slide */
+    }
+    .carousel-item {
+        background: url('img/imagen portada1 (1).jpg') no-repeat center center;
+        background-size: contain; /* Asegura que la imagen se ajuste sin cortarse */
+        height: 600px; /* Altura del carrusel */
+    }
+        
+    
+    
+/* Agregar margen a las secciones debajo del carrusel */
+.section {
+    margin-top: 10px; /* Ajusta el margen superior para separar el contenido */
+}
+
+
+    /* Estilo de las tarjetas de productos */
+    .card { 
+        max-width: 350px; /* Ancho máximo */
+        margin: 0 auto; /* Centra la tarjeta */
+        transition: box-shadow 0.8s ease; /* Transición para la sombra */
+    }
+
+    .card-img-top {
+        height: 300px; /* Altura de la imagen */
+        object-fit: cover; /* Ajusta la imagen */
+    }
+
+    .card:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra en hover */
+    }
+
+    /* Estilo de los botones */
+    .btn-lg {
+        font-size: 1.25rem; /* Tamaño de fuente */
+        padding: 0.75rem 1.25rem; /* Espaciado interno */
+    }
+
+    .btn-success {
+        transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+    }
+
+    .btn-success:hover {
+        background-color: #28a745; /* Color de fondo en hover */
+        transform: scale(1.05); /* Escala en hover */
+    }
+
+    /* Estilo del Mapa */
+    .map-container {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-top: 56.25%; /* Relación de aspecto 16:9 */
+        border-radius: 8px; /* Bordes redondeados */
+        overflow: hidden; /* Oculta el desbordamiento */
+    }
+
+    .map-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0; /* Sin borde */
+    }
+
+    /* CSS general para móviles */
+    @media (max-width: 767.98px) {
+        iframe {
+            width: 100%;
+            height: 300px; /* Altura ajustada */
+        }
+    }
+
+    /* Estilo del contacto */
+    .contact {
+        padding: 3rem 1.5rem; /* Espaciado interno */
+    }
+
+    .contact .row {
+        display: flex;
+        align-items: stretch; /* Alinea elementos */
+    }
+
+    .map-wrapper {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-top: 56.25%; /* Relación de aspecto 16:9 */
+        border-radius: 8px; /* Bordes redondeados */
+        overflow: hidden; /* Oculta el desbordamiento */
+    }
+
+    .contact-wrapper {
+        background-color: #f8f9fa; /* Color de fondo */
+        border-radius: 8px; /* Bordes redondeados */
+        overflow: hidden; /* Oculta el desbordamiento */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .map-wrapper {
+        flex: 1; /* Ocupa el espacio disponible */
+        min-height: 450px; /* Altura mínima */
+    }
+
+    .map-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .map-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0; /* Sin borde */
+    }
+
+    .contact-wrapper {
+        flex: 1; /* Ocupa el espacio disponible */
+        min-height: 450px; /* Altura mínima */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* Espaciado vertical */
+    }
+
+    .contact-wrapper form {
+        flex-grow: 1; /* Permite que el formulario crezca */
+    }
+
+    .contact-wrapper p {
+        margin-top: 1rem; /* Espaciado superior */
+        color: #6c757d; /* Color del texto */
+    }
+
+    /* Estilo del botón de WhatsApp */
+    .whatsapp-float {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #25D366; /* Color de fondo */
+        color: white; /* Color del texto */
+        border-radius: 50%; /* Forma circular */
+        padding: 15px; /* Espaciado interno */
+        box-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* Sombra */
+        z-index: 100; /* Por encima de otros elementos */
+        font-size: 35px; /* Tamaño del ícono */
+        text-align: center; /* Alineación centrada */
+        display: flex;
+        align-items: center; /* Centrado vertical */
+        justify-content: center; /* Centrado horizontal */
+        width: 60px; /* Ancho */
+        height: 60px; /* Altura */
+    }
+
+    .whatsapp-float:hover {
+        background-color: #128C7E; /* Color de fondo en hover */
+        color: white; /* Color del texto en hover */
+    }
+
+    .whatsapp-float::after {
+        content: "Contacta con nosotros";
+        position: absolute;
+        bottom: 70px; /* Espaciado desde el fondo */
+        right: 0;
+        background-color: #333; /* Color de fondo del texto */
+        color: #fff; /* Color del texto */
+        padding: 5px; /* Espaciado interno */
+        border-radius: 5px; /* Bordes redondeados */
+        font-size: 12px; /* Tamaño del texto */
+        white-space: nowrap; /* Sin ajuste de línea */
+        display: none; /* Oculto por defecto */
+    }
+
+    .whatsapp-float:hover::after {
+        display: block; /* Mostrar al pasar el mouse */
+    }
+
+    /* Ajuste de scroll-padding-top para el navbar */
+    html {
+        scroll-padding-top: 71px; /* Ajusta según la altura de tu navbar */
+        scroll-behavior: smooth; /* Suaviza el desplazamiento */
+    }
+
+    /* Estilos para el formulario de contacto */
+    #contactForm input, #contactForm textarea {
+        border-radius: 4px; /* Bordes redondeados en inputs y textarea */
+        padding: 0.75rem; /* Espaciado interno */
+        border: 1px solid #ced4da; /* Borde */
+        width: 100%; /* Ancho completo */
+        margin-bottom: 1rem; /* Espaciado inferior */
+    }
+
+    #contactForm button {
+        border-radius: 4px; /* Bordes redondeados en el botón */
+        padding: 0.75rem 1.25rem; /* Espaciado interno */
+        background-color: #198754; /* Color de fondo del botón */
+        color: #ffffff; /* Color del texto del botón */
+        border: none; /* Sin borde */
+        font-size: 1rem; /* Tamaño de fuente */
+        font-weight: 600; /* Peso de fuente medio */
+        cursor: pointer; /* Cambia el cursor */
+        transition: background-color 0.3s ease; /* Transición suave */
+    }
+
+    #contactForm button:hover {
+        background-color: #145a32; /* Color de fondo en hover */
+    }
+
